@@ -1,0 +1,16 @@
+services:
+  model-service:
+    build:
+      context: ./model-service
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+
+  web-app:
+    build:
+      context: ./web-app
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    depends_on:
+      - model-service
