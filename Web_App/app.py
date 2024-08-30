@@ -39,7 +39,7 @@ if uploaded_file is not None:
                 # confidence = pred['confidence']
                 # st.write(f"Detected: {label}")
 
-                # Set box color based on the class name
+                # # Set box color based on the class name
                 # box_color = "green" if pred['class_name'] == 'non_defected' else "red"
 
                 # # Construct label
@@ -54,8 +54,8 @@ if uploaded_file is not None:
 
                 # if pred['class_name'] == 'defected':
                 #     draw.rectangle(box, outline="red", width=2)
-                # # draw.text((box[0], box[1]), label, fill=box_color)
-                # img = np.array(img)
+                # draw.text((box[0], box[1]), label, fill=box_color)
+                img = np.array(img)
             
             st.image(img, caption='Detected Hot Spots', use_column_width=True)
         else:
